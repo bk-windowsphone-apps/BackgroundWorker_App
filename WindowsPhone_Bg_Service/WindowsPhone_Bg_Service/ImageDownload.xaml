@@ -1,0 +1,48 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="WindowsPhone_Bg_Service.ImageDownload"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Image Downloads" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}">
+            	<Run FontSize="48" Text="Basic BG Service"/>
+            </TextBlock>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="10,0,14,0">
+            <Button x:Name="Image_Start_Button" Content="Start Downloads" HorizontalAlignment="Left" Margin="116,557,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.015,0.186" Click="Image_Start_Button_Click"/>
+            <TextBlock x:Name="Image1_TextBlock" HorizontalAlignment="Left" Margin="13,10,0,0" TextWrapping="Wrap" Text="Image 1 location:" VerticalAlignment="Top"/>
+            <TextBox x:Name="Image1_TextBox" HorizontalAlignment="Left" Height="72" Margin="0,37,0,0" TextWrapping="Wrap" Text="http://www.sjsu.edu/academics/pics/acedemics.jpg" VerticalAlignment="Top" Width="436" />
+            <TextBlock x:Name="Image2_TextBlock" HorizontalAlignment="Left" Margin="10,109,0,0" TextWrapping="Wrap" Text="Image 2 location:" VerticalAlignment="Top"/>
+            <TextBox x:Name="Image2_TextBox" HorizontalAlignment="Left" Height="72" Margin="0,136,0,0" TextWrapping="Wrap" Text="http://www.sjsu.edu/discover/pics/administration.jpg" VerticalAlignment="Top" Width="436"/>
+            <TextBlock x:Name="Image3_TextBlock" HorizontalAlignment="Left" Margin="10,208,0,0" TextWrapping="Wrap" Text="Image 3 location:" VerticalAlignment="Top"/>
+            <TextBox x:Name="Image3_TextBox" HorizontalAlignment="Left" Height="72" Margin="0,235,0,0" TextWrapping="Wrap" Text="http://www.sjsu.edu/housingoptions/pics/campus-housing.jpg" VerticalAlignment="Top" Width="436"/>
+            <TextBlock x:Name="Image4_TextBlock" HorizontalAlignment="Left" Margin="10,307,0,0" TextWrapping="Wrap" Text="Image 4 location:" VerticalAlignment="Top"/>
+            <TextBox x:Name="Image4_TextBox" HorizontalAlignment="Left" Height="72" Margin="0,334,0,0" TextWrapping="Wrap" Text="http://www.sjsu.edu/sjsuhome/pics/hiep-012714.jpg" VerticalAlignment="Top" Width="436"/>
+            <TextBlock x:Name="Image5_TextBlock" HorizontalAlignment="Left" Margin="13,406,0,0" TextWrapping="Wrap" Text="Image 5 location:" VerticalAlignment="Top"/>
+            <TextBox x:Name="Image5_TextBox" HorizontalAlignment="Left" Height="72" Margin="0,433,0,0" TextWrapping="Wrap" Text="http://www.sjsu.edu/future_students/pics/student-photographer.jpg" VerticalAlignment="Top" Width="436"/>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
